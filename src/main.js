@@ -5,14 +5,16 @@ anime({
     targets: '.svgShield',
     opacity: 0,
     easing: 'easeInOutQuad',
-    delay: 4000
+    delay: 4000,
+    duration: 2000,
   });
   
 anime({
     targets: '.logoShield, .logoLetras, .textRemo',
     opacity: 1,
     easing: 'easeInOutQuad',
-    delay: 4000
+    delay: 4000,
+    duration: 2000,
   });
 
   anime({
