@@ -23,12 +23,17 @@ module.exports = {
               "sass-loader",
             ],
           },
+          {
+            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            type: 'asset/resource',
+          },
         ],
       },
     plugins: [
         new HTMLWebPackPlugin({
             template: 'src/index.html'
         })
-    ]
+    ],
+    mode: 'development',
 
 }
