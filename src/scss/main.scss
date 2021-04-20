@@ -1,0 +1,39 @@
+//Colores
+@import '../scss/colors.scss';
+
+//Componentes
+@import '../components/Header/Header.scss';
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: $dark-gray;
+    scroll-behavior: smooth;
+    transition: all 1s;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #353144;
+    color: white;
+    overflow:hidden;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}

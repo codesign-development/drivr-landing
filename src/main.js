@@ -1,26 +1,8 @@
-import './main.scss'
-import anime from 'animejs/lib/anime.es'
+import '../src/scss/main.scss'
+import Header from '../src/components/Header'
 
-anime({
-    targets: '.svgShield',
-    opacity: 0,
-    easing: 'easeInOutQuad',
-    delay: 4000,
-    duration: 2000,
-  });
-  
-anime({
-    targets: '.logoShield, .logoLetras, .textRemo',
-    opacity: 1,
-    easing: 'easeInOutQuad',
-    delay: 4000,
-    duration: 2000,
-  });
+const nav = document.querySelector('#containerNav')
 
-  anime({
-    targets: '.back',
-    opacity: 1,
-    easing: 'easeInOutQuad',
-    duration: 2000,
-    delay: 4500
-  });
+window.onload = function() {
+  nav.appendChild(Header())
+};
