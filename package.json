@@ -15,7 +15,10 @@
   },
   "devDependencies": {
     "animejs": "^3.2.1",
-    "html-loader": "^2.1.2"
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "swiper": "^6.5.7",
+    "url-loader": "^4.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
