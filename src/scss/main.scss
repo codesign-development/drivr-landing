@@ -88,17 +88,17 @@ a {
   height: 100vh;
 
   .swiper-container {
-    width: 100%;
+    width: 100vw;
     height: 100%;
   }
 
   .swiper-slide {
-    
+    width: 100vw;
     background: transparent;
     position: relative;
     /* Center slide text vertically */
     
-    img{ 
+    >img{ 
       width: 100vw;
       mix-blend-mode: soft-light;
       opacity: .25;
@@ -106,7 +106,18 @@ a {
     h1{
       position: absolute;
       bottom: 5%;
-      left: 2%
+      left: 2%;
+      >span{
+        color: $orange;
+      }
+    }
+    .sl2{
+      text-align: right;
+      left: 0;
+      right: 2%;
+      >span{
+        color: $orange;
+      }
     }
   }
 }

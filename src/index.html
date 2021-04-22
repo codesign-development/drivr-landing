@@ -20,11 +20,15 @@
           <img src="../public/img/bgSlideUno.jpg" alt="slide1">
           <h1>
             Entornos virtuales<br/>
-            para una conducción segura
+            para una <span>conducción segura</span>
           </h1>
         </div>
         <div class="swiper-slide">
-          
+          <img src="../public/img/bgSlideDos.jpg" alt="slide2">
+          <h1 class="sl2">
+            <span>Simuladores inmersivos en</span><br/>
+            realidad virtual y/o triple pantalla
+          </h1>
         </div>
       </div>
       <!-- Add Pagination -->
@@ -47,15 +51,23 @@
     <h1>Contacto</h1>
   </section>
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+  <script src="../public/js/swiper-bundle.min.js"></script>
+  <script src="../public/js/particles.min.js"></script>
+  <script src="../public/js/stats.min.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
+      slidesPreView: 1,
+      loop: true,
       pagination: {
         el: '.swiper-pagination',
         dynamicBullets: true,
+        
       },
+      autoplay:{
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      spaceBettweem: 300,
     });
 
   </script>
