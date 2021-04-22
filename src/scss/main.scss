@@ -6,6 +6,7 @@
 
 //Componentes
 @import '../components/Header/Header.scss';
+@import '../components/Pricing/Pricing.scss';
 
 //Globales
 html,
@@ -20,34 +21,48 @@ body {
 
 h1 {
   font-family: 'Barlow-Black';
-  font-size: 4.5em;
+  font-size: 3.5em;
   color: white;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
 
 h2 {
   font-family: 'Barlow-Black';
-  font-size: 3em;
+  font-size: 2.5em;
   color: white;
+  margin-block-start: 0.4em;
+  margin-block-end: 0.4em;
 }
 
 h3 {
   font-family: 'Barlow-Black';
-  font-size: 2.5em;
+  font-size: 2em;
   color: white;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 h4 {
   font-family: 'Barlow-Black';
-  font-size: 2em;
+  font-size: 1.2em;
   color: white;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 
 p,
 a {
   font-family: 'Barlow-Medium';
-  font-size: 1.2em;
+  font-size: 1em;
   color: white;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+a {
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
@@ -68,14 +83,15 @@ a {
 }
 
 .section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 80px;
   width: 100vw;
   height: 100vh;
-  color: white;
   position: relative;
   background: transparent;
+  >h2{
+    margin-left: 24px;
+    margin-bottom: 24px;
+  }
 }
 
 .homeSlide {
@@ -96,26 +112,29 @@ a {
     width: 100vw;
     background: transparent;
     position: relative;
-    /* Center slide text vertically */
-    
-    >img{ 
+
+    >img {
       width: 100vw;
       mix-blend-mode: soft-light;
       opacity: .25;
     }
-    h1{
+
+    h1 {
       position: absolute;
       bottom: 5%;
       left: 2%;
-      >span{
+
+      >span {
         color: $orange;
       }
     }
-    .sl2{
+
+    .sl2 {
       text-align: right;
       left: 0;
       right: 2%;
-      >span{
+
+      >span {
         color: $orange;
       }
     }
@@ -169,4 +188,68 @@ a {
 
 .count-particles {
   border-radius: 0 0 3px 3px;
+}
+
+@media (max-width: 1024px) {
+
+  .homeSlide {
+    height: 100vh;
+
+    .swiper-slide {
+      >img {
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    height: auto;
+  }
+  h1 {
+    font-size: 3em;
+  }
+
+  .homeSlide {
+    height: auto;
+  }
+}
+
+@media (max-width: 426px) {
+  h1 {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 1em;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+  }
+  .homeSlide {
+    .swiper-slide {
+      >img {
+        width: 100vw;
+        height: auto;
+      }
+
+      h1 {
+        position: absolute;
+        bottom: 6%;
+        left: 4%;
+
+        >span {
+          color: $orange;
+        }
+      }
+
+      .sl2 {
+        text-align: left;
+        left: 0;
+        left: 4%;
+        right: 0;
+
+      }
+    }
+  }
 }
