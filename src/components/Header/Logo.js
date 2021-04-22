@@ -1,5 +1,6 @@
-<div class="logo">
-  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+export default function Logo () {
+    return(
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 203 71" style="enable-background:new 0 0 203 71;" xml:space="preserve">
 
 <path fill="#F6871F" d="M168.5,70.1c-1,0-1.9-0.3-2.8-0.8c-3.2-1.9-6.3-4-9.1-6.3c-11.7-9.6-16.9-20.3-18.6-24.4
@@ -76,16 +77,7 @@
 	c0,0.6-0.2,1.1-0.6,1.6c-0.4,0.4-0.8,0.8-1.5,1l1.4,3.8l0,0.1h-1.7L120.7,57.8z M119.1,56.5l1.5,0c0.5,0,1-0.1,1.4-0.4
 	c0.4-0.3,0.6-0.7,0.6-1.2c0.1-0.5,0-0.8-0.3-1.1c-0.2-0.3-0.6-0.4-1.1-0.4l-1.7,0L119.1,56.5z"/>
 </svg>
-  
-</div>
+        
 
-<nav>
-  <ul>
-    <li><a href="/#home">Home</a></li>
-    <li><a href="/#que-es">¿Qué es?</a></li>
-    <li><a href="/#que-evalua">¿Qué evalúa?</a></li>
-    <li><a href="/#seguridad-vial">Seguridad vial</a></li>
-    <li><a href="/#servicios">Servicios</a></li>
-    <li><a href="/#contacto">Contacto</a></li>
-  </ul>
-</nav>
+    )
+}
