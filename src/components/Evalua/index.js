@@ -1,1 +1,1 @@
-export {default} from '../Evalua'
+export {default} from './Evalua'
