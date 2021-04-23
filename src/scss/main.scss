@@ -6,6 +6,7 @@
 
 //Componentes
 @import '../components/Header/Header.scss';
+@import '../components/QueEs/QueEs.scss';
 @import '../components/Seguridad/Seguridad.scss';
 @import '../components/Pricing/Pricing.scss';
 @import '../components/Contacto/Contacto.scss';
@@ -100,6 +101,7 @@ span{
 #contacto{
   padding-top: 0px;
 }
+
 //Slide
 .homeSlide {
   background: transparent;

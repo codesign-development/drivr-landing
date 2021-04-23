@@ -3,9 +3,11 @@ import Header from './components/Header'
 import Seguridad from './components/Seguridad/Seguridad';
 import Pricing from './components/Pricing';
 import Contacto from './components/Contacto'
+import QueEs from './components/QueEs';
 
 /* Secciones Componentes */
 const nav = document.querySelector('#containerNav')
+const about = document.querySelector('#que-es')
 const seguridad = document.querySelector('#seguridad-vial')
 const servicios = document.querySelector('#servicios')
 const contact = document.querySelector('#contacto')
@@ -13,6 +15,7 @@ const contact = document.querySelector('#contacto')
 /* Init Componentes */
 window.onload = function () {
   nav.appendChild(Header())
+  about.appendChild(QueEs())
   seguridad.appendChild(Seguridad())
   servicios.appendChild(Pricing())
   contact.appendChild(Contacto())
