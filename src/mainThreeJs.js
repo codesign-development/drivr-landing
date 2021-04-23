@@ -101,7 +101,8 @@ function init() {
           break;
         case (actualScroll < inqueEs):
           modelo.style.opacity = 1
-          simulador.rotation.set(0, 5.5, 0)
+          //simulador.rotation.set(0, 5.5, 0)
+          tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: 5.5 }, "=1")
           break;
         case (actualScroll < inevala + inqueEs):
           modelo.style.opacity = 1
