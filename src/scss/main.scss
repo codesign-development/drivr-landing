@@ -4,6 +4,9 @@
 //Fonts
 @import '../scss/fonts.scss';
 
+//Modelos FBX
+@import '../scss/simulador.scss';
+
 //Componentes
 @import '../components/Header/Header.scss';
 @import '../components/QueEs/QueEs.scss';
@@ -11,6 +14,7 @@
 @import '../components/Seguridad/Seguridad.scss';
 @import '../components/Pricing/Pricing.scss';
 @import '../components/Contacto/Contacto.scss';
+
 
 //Globales
 html,
