@@ -8,6 +8,7 @@
 @import '../components/Header/Header.scss';
 @import '../components/Seguridad/Seguridad.scss';
 @import '../components/Pricing/Pricing.scss';
+@import '../components/Contacto/Contacto.scss';
 
 //Globales
 html,
@@ -95,6 +96,9 @@ span{
     margin-left: 24px;
     margin-bottom: 24px;
   }
+}
+#contacto{
+  padding-top: 0px;
 }
 //Slide
 .homeSlide {
@@ -221,6 +225,10 @@ span{
 }
 
 @media (max-width: 426px) {
+  #contacto{
+    padding-top: 0px;
+    height: auto;
+  }
   h1 {
     font-size: 1em;
   }
