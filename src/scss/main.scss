@@ -102,6 +102,20 @@ span{
 #contacto{
   padding-top: 0px;
 }
+#que-es{
+  >div{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+#que-evalua{
+  >div{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+}
 
 //Slide
 .homeSlide {
@@ -216,7 +230,12 @@ span{
 
 @media (max-width: 768px) {
   .section {
-    height: auto;
+    height: auto
+  }
+  #que-es{
+    >div{
+      hheight: 100vh;
+    }
   }
   h1 {
     font-size: 3em;

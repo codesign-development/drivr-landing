@@ -1,32 +1,35 @@
-.bulletDos{
-    width: 70%;
-    top: 160px;
-    left: 15%;
-    position: absolute;
-    z-index: 4;
+.bulletDos {
+  width: 70%;
+  top: 160px;
+  left: 15%;
+  position: absolute;
+  z-index: 4;
 }
 
-.evaluaTxt{
-    padding: 24px;
-    width: 20%;
-    .queEs{
-        text-align: right;
-        h4{
-            margin-bottom: 24px;
-        }
+.evaluaTxt {
+  padding: 24px;
+  width: 20%;
+
+  .queEs {
+    text-align: right;
+
+    h4 {
+      margin-bottom: 24px;
     }
+  }
 }
 
-.btnImp{
-    background-color: $orange;
-    width: 320px;
-    padding: 8px;
-    border-radius: 40px;
-    position: absolute;
-    right: 8%;
-    bottom: 20%;
-    p{
-        text-align: center;
-        color: $dark-gray;
-    }
+.btnImp {
+  background-color: $orange;
+  width: 320px;
+  padding: 8px;
+  border-radius: 40px;
+  position: absolute;
+  right: 8%;
+  bottom: 20%;
+
+  p {
+    text-align: center;
+    color: $dark-gray;
+  }
 }
