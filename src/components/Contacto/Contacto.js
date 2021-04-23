@@ -1,9 +1,9 @@
-import HeaderView from './HeaderView.html'
+import ContactoView from './ContactoView.html'
 
 export default () => {
     
     const divElement = document.createElement('div')
-    divElement.innerHTML = HeaderView
+    divElement.innerHTML = ContactoView
 
     return divElement
 }

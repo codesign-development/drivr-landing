@@ -1,9 +1,10 @@
-import HeaderView from './HeaderView.html'
+import Seguridad from './SeguridadView.html'
 
 export default () => {
     
     const divElement = document.createElement('div')
-    divElement.innerHTML = HeaderView
+    divElement.innerHTML = Seguridad
 
     return divElement
+    
 }

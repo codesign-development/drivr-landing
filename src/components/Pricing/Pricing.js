@@ -1,5 +1,4 @@
 import Pricing from './PricingView.html'
-/* import Logo from '../../components/Header/Logo' */
 
 export default () => {
     
