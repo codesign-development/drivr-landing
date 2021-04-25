@@ -89,7 +89,7 @@ function init() {
         delay: -1
       });
 
-      console.log(home);
+      
       /* if (alturaSeccion - 80 < scrollTop) {
         modelo.style.opacity = 1
         tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -.7 }, "=1")

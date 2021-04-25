@@ -1,5 +1,6 @@
 .containerDrop {
   flex: 1;
+  
 
   &:last-child {
     margin-left: 1em;
@@ -52,6 +53,9 @@
     color:white;
     background: $dark-gray;
     transition: all .35s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   &-close {

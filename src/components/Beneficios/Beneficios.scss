@@ -1,0 +1,31 @@
+.containerBen {
+  position: relative;
+
+  .arrowBackBen {
+    width: 60px;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+  }
+}
+
+.cardsBen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .cardBen {
+    width: 20%;
+    border: 1px solid $orange;
+    border-radius: 16px;
+    padding: 28px;
+
+    ul {
+      li {
+        color: white;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

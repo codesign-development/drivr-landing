@@ -14,6 +14,9 @@
 @import '../components/Seguridad/Seguridad.scss';
 @import '../components/Pricing/Pricing.scss';
 @import '../components/Contacto/Contacto.scss';
+@import '../components/Beneficios/Beneficios.scss';
+@import '../components/Desarrollo/Desarrollo.scss';
+@import '../components/Implemetacion/Implementaion.scss';
 
 
 //Globales
@@ -120,7 +123,56 @@ span{
     height: 100vh;
   }
 }
+#seguridad-vial{
+  >div{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 8;
+  }
+}
+#modelo-implementacion{
+  
+    display: none;
+    background-color: $dark-gray;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 1s;
+    >div{
+      position: relative;
+      h1{
+        margin-left: 24px;
+      }
+    }
+  
+  
+}
+#beneficios{
+  
+  display: none;
+  background-color: $dark-gray;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 1s;
+  >div{
+    position: relative;
+    h1{
+      margin-left: 24px;
+    }
+  }
 
+
+}
 //Slide
 .homeSlide {
   background: transparent;
