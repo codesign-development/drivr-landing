@@ -1,0 +1,101 @@
+.bulletDos {
+  width: 65%;
+  top: 80px;
+  left: 12%;
+  position: absolute;
+  z-index: 6;
+}
+
+.evaluaTxt {
+  padding: 24px;
+  width: 20%;
+
+  .queMide {
+    text-align: right;
+
+    h4 {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.btnImp {
+  background-color: $orange;
+  width: 320px;
+  padding: 8px;
+  border-radius: 40px;
+  position: absolute;
+  right: 8%;
+  bottom: 20%;
+  z-index: 7;
+  cursor: pointer;
+  p {
+    text-align: center;
+    color: $dark-gray;
+  }
+}
+
+@media (max-width: 768px) {
+
+    .bulletDos {
+        width: 90%;
+        top: 36%;
+        left: 5%;
+    }
+    .evaluaTxt {
+        width: 50%;
+        left: 0;
+        top: 10%;
+        .queMide {
+          text-align: left;
+            margin-right: 24px;
+          h4 {
+            margin-bottom: 24px;
+          }
+        }
+      }
+      .btnImp {
+        width: 320px;
+        right: 8%;
+        bottom: 14%;
+      
+        p {
+          text-align: center;
+          color: $dark-gray;
+        }
+      }
+}
+
+@media (max-width: 426px) {
+
+    .bulletDos {
+        width: 90%;
+        top: 36%;
+        left: 5%;
+    }
+    .evaluaTxt {
+        width: 70%;
+        top: 10%;
+        p{
+            font-size: .8em;
+        }
+        .queMide {
+            margin-bottom: 40px;
+          h4 {
+            margin-bottom: 12px;
+            font-size: .8em;
+          }
+        }
+      }
+      .btnImp {
+        width: 300px;
+        right: 0%;
+        left: 3%;
+        bottom: 14%;
+      
+        p {
+          text-align: center;
+          color: $dark-gray;
+        }
+      }
+}

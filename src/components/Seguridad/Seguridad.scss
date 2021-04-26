@@ -1,0 +1,234 @@
+.containerDrop {
+  flex: 1;
+  
+
+  &:last-child {
+    margin-left: 1em;
+    margin-right: .8em;
+  }
+}
+
+/* Accordion styles */
+.tabs {
+  //border: 2px solid $orange;
+  //border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.tab {
+  width: 99.6%;
+  color: white;
+  overflow: hidden;
+  border: 1px solid $orange;
+  >input {
+    position: absolute;
+    opacity: 0;
+    }
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: $dark-gray;
+    font-weight: bold;
+    cursor: pointer;
+
+    /* Icon */
+    &:hover {
+      background: darken($dark, 10%);
+    }
+
+    &::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s;
+    }
+  }
+
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    color:white;
+    background: $dark-gray;
+    transition: all .35s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: $dark-gray;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($dark, 10%);
+    }
+  }
+}
+
+// :checked
+input:checked {
+   
+  +.tab-label {
+    background: darken($dark-gray, 10%);
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  ~.tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+    &__obj{
+        display: flex;
+        flex-direction: column;
+        padding: 0 24px;
+        position: relative;
+        div{
+            background-color: $orange;
+            width: 386px;
+            padding: 8px 0;
+            text-align: center;
+            border-radius: 16px;
+            position: absolute;
+            bottom: 2%;
+            left: 30%;
+            cursor: pointer;
+            p{
+              color: $dark-gray;  
+            }
+        }
+    }
+}
+@media (max-width: 1025px) {
+    @media (max-width: 1025px) {
+        .info{
+                &__obj{
+                    height: 200px;
+                    div{
+                        width: 320px;
+                        padding: 8px 0;
+                        position: absolute;
+                        bottom: 0%;
+                        left: 10%;
+                        p{
+                            font-size: .7em;
+                          }
+                    }
+                }
+            }
+    }
+}
+@media (max-width: 768px) {
+    .tabs {
+        //border: 2px solid $orange;
+        //border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.5);
+      }
+    .tab {
+        width: 85%;
+    }
+    .info{
+        flex-direction: column;
+        padding: 24px;
+        justify-content: center;
+        &__column{
+            img{
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+        &__obj{
+            margin-top: 40px;
+             height: 200px;
+            div{
+                background-color: $orange;
+                width: 386px;
+                padding: 8px 0;
+                
+                text-align: center;
+                border-radius: 16px;
+                position: absolute;
+                bottom: 0%;
+                left: 20%;
+    
+                p{
+                  color: $dark-gray;  
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 426px) {
+    .tabs {
+        margin-top: 40px;
+      }
+    .tab {
+        width: 99%;
+        font-size: .5em;
+    }
+    .info{
+        flex-direction: column;
+        padding: 24px;
+        justify-content: center;
+        &__column{
+            img{
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+        &__obj{
+            margin-top: 40px;
+            height: 160px;
+            padding: 0 0px;
+            h4{
+                font-size: .8em;
+            }
+            div{
+                width: 240px;
+                padding: 8px 0;
+                position: absolute;
+                bottom: 1%;
+                left: 15%;
+    
+                p{
+                  color: $dark-gray; 
+                  font-size: .6em;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 320px) {
+    
+    .info{
+        &__obj{
+           
+            div{
+                left: 0%;
+    
+                
+            }
+        }
+    }
+
+}
