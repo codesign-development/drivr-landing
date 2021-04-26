@@ -11,11 +11,8 @@ import {
 
 let camera, scene, renderer, stats;
 
-const clock = new THREE.Clock();
-
-let mixer;
-
 var simulador = {}
+
 
 init();
 animate();
@@ -26,9 +23,10 @@ function init() {
   document.body.appendChild(container);
   container.className = "simulador";
 
-  camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 2000);
+  camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 2000 );
 
   camera.position.set(100, 200, 300);
+  console.log(camera)
 
   scene = new THREE.Scene();
 
@@ -60,8 +58,8 @@ function init() {
 
 
     object.name = "simulador"
-    object.position.set(0, 40, 0)
-    object.rotation.set(0, 5.5, 0)
+    object.position.set(-30,-40,0)
+    object.rotation.set(0,-.2, 0)
     object.scale.set(1, 1, 1)
     window["simulador"] = object
     simulador = object
@@ -70,20 +68,6 @@ function init() {
     let texture = new THREE.TextureLoader().load("./public/fbx/UV_CaseNuevoAlbedo.png");
     simulador.children[5].material[0].map = texture
 
-    function windoResize (){
-
-      let windowWidth = window.innerWidth
-     
-      if(windowWidth<=768){
-        simulador.scale.set(.6, .6, .6)
-        simulador.position.set(-10, 50, 0)
-      }
-      if(windowWidth<=426){
-        simulador.scale.set(.5, .5, .5)
-        simulador.position.set(10, 40, 0)
-      }
-    }
-    windoResize ()
 
     function verScroll() {
       let home = document.querySelector('#home')
@@ -106,23 +90,19 @@ function init() {
       });
 
       
-      /* if (alturaSeccion - 80 < scrollTop) {
-        modelo.style.opacity = 1
-        tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -.7 }, "=1")
-      }  */
       switch (true) {
         case (actualScroll < inhome):
           modelo.style.opacity = 0
           tl.to(simulador.rotation, 3, { ease: Power3.easeInOut, y: -.7 }, "=1")
+          tl.to(simulador.position, 2, { ease: Power3.easeInOut, x:-30,y:-40,z:-35}, "-1")
           break;
         case (actualScroll-200 < inqueEs):
           modelo.style.opacity = 1
-          //simulador.rotation.set(0, 5.5, 0)
-          tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: 5.5 }, "=1")
+          tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -7 }, "=1")
           break;
         case (actualScroll < inevala + inqueEs):
           modelo.style.opacity = 1
-          tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: 4.2 }, "=1")
+          tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -8.2 }, "=1")
           break;
         case (actualScroll < inevala + inqueEs + inseg):
           modelo.style.opacity = 0
@@ -137,6 +117,22 @@ function init() {
         default:
           break;
       }
+      
+      function windoResize(){
+
+        let windowWidth = window.innerWidth
+       
+        if(windowWidth<=768){
+          simulador.scale.set(.55,.55,.55)
+          simulador.position.set(10,-30,10)
+        }
+        if(windowWidth<=426){
+          simulador.scale.set(.4,.4,.4)
+          simulador.position.set(-8,-20,-10)
+        }
+      }
+      windoResize();
+      window.addEventListener('resize', windoResize);
     }
 
     window.addEventListener('scroll', verScroll)
@@ -155,11 +151,13 @@ function init() {
   container.appendChild(renderer.domElement);
 
   const controls = new OrbitControls(camera, renderer.domElement);
-  controls.target.set(0, 100, 0);
+  controls.target.set(0,0,0);
   controls.enableZoom = false
   controls.enablePan = false
-  controls.enableRotate = false
+  controls.enableRotate = true
+  controls.maxPolarAngle = 1.2
   controls.update();
+  console.log(controls)
 
   window.addEventListener('resize', onWindowResize);
 
@@ -173,6 +171,7 @@ function onWindowResize() {
   camera.updateProjectionMatrix();
 
   renderer.setSize(window.innerWidth, window.innerHeight);
+  
 
 }
 
