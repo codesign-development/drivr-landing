@@ -7,11 +7,16 @@ export default () => {
 
     const arrow = divElement.querySelector('.arrowBackBen')
     const beneficios = document.querySelector('#beneficios')
+    const implementacion = document.querySelector('#modelo-implementacion')
+
     console.log(beneficios);
     arrow.addEventListener('click', ()=>{
         beneficios.removeChild(beneficios.firstChild)
         beneficios.style.display = 'none'
         beneficios.style.opacity = 0
+        implementacion.removeChild(implementacion.firstChild)
+        implementacion.style.display = 'none'
+        implementacion.style.opacity = 0
     })
 
     return divElement
