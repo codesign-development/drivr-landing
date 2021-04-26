@@ -69,12 +69,31 @@
       background-color: transparent;
       border: none;
       border-bottom: 1px solid $orange;
+      color: white;
+      outline: none;
+      
     }
+   input::focus{
+      background-color: transparent;
+      outline: none;
+    }
+    input::placeholder {
+      color: white;
+    }
+
 
     textarea {
       margin-bottom: 20px;
       background-color: transparent;
       border: 1px solid $orange;
+      outline: none;
+      color: white;
+    }
+
+    textarea::focus{
+      background-color: transparent;
+      outline: none;
+      color: white;
     }
 
     button {

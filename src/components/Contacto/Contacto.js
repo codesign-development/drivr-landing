@@ -21,7 +21,7 @@ export default () => {
         empresa.addEventListener('blur', validarForm);
         coment.addEventListener('blur', validarForm);
         console.log(form)
-        btnEnviar.addEventListener('submit', enviarFormulario);
+        btnEnviar.addEventListener('click', enviarFormulario);
     }
 
     function validarForm (e){
@@ -65,7 +65,7 @@ export default () => {
                 body: data
             })
             console.log('se mando info')
-            window.reload
+           window.location.reload();
         } catch(error){
             console.log(error)
         }

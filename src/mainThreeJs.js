@@ -76,11 +76,11 @@ function init() {
      
       if(windowWidth<=768){
         simulador.scale.set(.6, .6, .6)
-          simulador.position.set(-10, 50, 0)
+        simulador.position.set(-10, 50, 0)
       }
       if(windowWidth<=426){
         simulador.scale.set(.5, .5, .5)
-          simulador.position.set(10, 40, 0)
+        simulador.position.set(10, 40, 0)
       }
     }
     windoResize ()
