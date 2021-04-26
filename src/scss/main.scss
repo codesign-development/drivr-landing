@@ -28,6 +28,7 @@ body {
   transition: scroll 1s;
   font-family: 'Barlow-Regular', sans-serif;
   font-size: 100%;
+  
 }
 
 h1 {
@@ -101,6 +102,7 @@ span{
   height: 100vh;
   position: relative;
   background: transparent;
+  
   >h2{
     margin-left: 24px;
     margin-bottom: 24px;
@@ -141,6 +143,8 @@ span{
 #servicios{
   opacity: 0;
   transition: all ease-in 2s;
+  overflow-y:scroll
+ 
 }
 #modelo-implementacion{
     display: none;
@@ -155,6 +159,7 @@ span{
     transition: all 1s;
     >div{
       position: relative;
+      height: 100vh;
       h1{
         margin-left: 24px;
       }
@@ -174,6 +179,7 @@ span{
   transition: all 1s;
   >div{
     position: relative;
+    height: 100vh;
     h1{
       margin-left: 24px;
     }
@@ -207,7 +213,7 @@ span{
   margin: 0;
   padding: 0;
   height: 100vh;
-
+  overflow-y: hidden;
   .swiper-container {
     width: 100vw;
     height: 100%;
@@ -220,6 +226,8 @@ span{
 
     >img {
       width: 100vw;
+      height: 100vh;
+      object-fit: cover;
       mix-blend-mode: soft-light;
       opacity: .25;
     }
@@ -317,6 +325,7 @@ span{
   #que-es{
     >div{
       height: 100vh;
+      margin-top: -30px;
     }
   }
   h1 {
@@ -326,10 +335,30 @@ span{
   .homeSlide {
     height: 100vh;
   }
+
+  .swiper-slide {
+    width: 100vw;
+    background: transparent;
+    position: relative;
+    height: 100vh;
+    >img {
+      width: 100vw;
+      height: 100vh;
+      mix-blend-mode: soft-light;
+      opacity: .25;
+    }
+
+    
+
+    
+    }
+  } 
+
   #desarrollo{
     height: 100vh;
     >div{
       position: relative;
+      height: 100vh;
       h1{
         margin-left: 24px;
         font-size: 1em;
@@ -338,20 +367,20 @@ span{
   }
   #modelo-implementacion{
     
-    width: 100vw;
-    height: auto;
+    width: 98vw;
     
+    height: 100vh;
     >div{
       position: relative;
-      height: 200vh;
-      overflow-y: auto;
+      height: auto;
+      overflow-y: scroll;
       h1{
         margin-left: 24px;
       }
     }
   
 }
-}
+
 
 @media (max-width: 426px) {
   #contacto{

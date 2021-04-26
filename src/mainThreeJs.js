@@ -115,7 +115,7 @@ function init() {
           modelo.style.opacity = 0
           tl.to(simulador.rotation, 3, { ease: Power3.easeInOut, y: -.7 }, "=1")
           break;
-        case (actualScroll < inqueEs):
+        case (actualScroll-200 < inqueEs):
           modelo.style.opacity = 1
           //simulador.rotation.set(0, 5.5, 0)
           tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: 5.5 }, "=1")

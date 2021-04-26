@@ -21,7 +21,6 @@ window.onload = function () {
   seguridad.appendChild(Seguridad())
   servicios.appendChild(Pricing())
   contact.appendChild(Contacto())
-  
 };
 
 /* Animación Partículas */
@@ -37,10 +36,12 @@ function mostrarSection (){
 
   for(var i=0; i < topanim.length; i++){
     let alturaTop = topanim[i].offsetTop;
-    if(alturaTop - 100 < scrollTop){
+    if(alturaTop - 300 < scrollTop){
       topanim[i].style.opacity = 1;
     }
   }
 }
 
 window.addEventListener('scroll', mostrarSection)
+
+
