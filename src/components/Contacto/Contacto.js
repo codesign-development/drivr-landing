@@ -20,7 +20,7 @@ export default () => {
         telefono.addEventListener('blur', validarForm);
         empresa.addEventListener('blur', validarForm);
         coment.addEventListener('blur', validarForm);
-        console.log(form)
+
         btnEnviar.addEventListener('click', enviarFormulario);
     }
 
