@@ -64,7 +64,7 @@ h4 {
 
 
 p,
-a {
+a,  li {
   font-family: 'Barlow-Medium';
   font-size: 1em;
   color: white;
@@ -92,7 +92,7 @@ span{
   width: 100vw;
   background-color: $dark;
   color: white;
-  overflow: hidden;
+  
 }
 //Secciones
 .section {
@@ -108,8 +108,11 @@ span{
 }
 #contacto{
   padding-top: 0px;
+  z-index: 40;
 }
 #que-es{
+  opacity: 0;
+  transition: all ease-in 2s;
   >div{
     position: relative;
     width: 100vw;
@@ -117,6 +120,8 @@ span{
   }
 }
 #que-evalua{
+  opacity: 0;
+  transition: all ease-in 2s;
   >div{
     position: relative;
     width: 100vw;
@@ -124,6 +129,8 @@ span{
   }
 }
 #seguridad-vial{
+  opacity: 0;
+  transition: all ease-in 2s;
   >div{
     position: relative;
     width: 100vw;
@@ -131,8 +138,11 @@ span{
     z-index: 8;
   }
 }
+#servicios{
+  opacity: 0;
+  transition: all ease-in 2s;
+}
 #modelo-implementacion{
-  
     display: none;
     background-color: $dark-gray;
     position: fixed;
@@ -150,10 +160,8 @@ span{
       }
     }
   
-  
 }
 #beneficios{
-  
   display: none;
   background-color: $dark-gray;
   position: fixed;
@@ -170,8 +178,25 @@ span{
       margin-left: 24px;
     }
   }
+}
 
-
+#desarrollo{
+  display: none;
+  background-color: $dark-gray;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 1s;
+  >div{
+    position: relative;
+    h1{
+      margin-left: 24px;
+    }
+  }
 }
 //Slide
 .homeSlide {
@@ -273,12 +298,14 @@ span{
 @media (max-width: 1024px) {
 
   .homeSlide {
+    width: 100vw;
     height: 100vh;
 
     .swiper-slide {
       >img {
         width: 100vw;
         height: 100vh;
+        object-fit: cover;
       }
     }
   }
@@ -290,7 +317,7 @@ span{
   }
   #que-es{
     >div{
-      hheight: 100vh;
+      height: 100vh;
     }
   }
   h1 {
@@ -298,8 +325,33 @@ span{
   }
 
   .homeSlide {
-    height: auto;
+    height: 100vh;
   }
+  #desarrollo{
+    height: 100vh;
+    >div{
+      position: relative;
+      h1{
+        margin-left: 24px;
+        font-size: 1em;
+      }
+    }
+  }
+  #modelo-implementacion{
+    
+    width: 100vw;
+    height: auto;
+    
+    >div{
+      position: relative;
+      height: 200vh;
+      overflow-y: auto;
+      h1{
+        margin-left: 24px;
+      }
+    }
+  
+}
 }
 
 @media (max-width: 426px) {
@@ -316,10 +368,13 @@ span{
     margin-block-end: 0.4em;
   }
   .homeSlide {
+    width: 100vw;
+    height: 100vh;
     .swiper-slide {
       >img {
         width: 100vw;
-        height: auto;
+        height: 100vh;
+        object-fit: cover;
       }
 
       h1 {

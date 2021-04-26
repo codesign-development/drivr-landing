@@ -29,3 +29,57 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+
+  .cardsBen {
+    display: flex;
+    flex-direction: column;
+  
+    .cardBen {
+      width: 80%;
+      margin: 0 auto;
+      padding: 12px;
+      margin-bottom: 24px;
+      ul {
+        
+        li {
+          margin-bottom: 12px;
+          font-size: .8em;
+        }
+      }
+    }
+  }
+
+  .containerBen {
+    height: 100vh;
+    .arrowBackBen {
+      width: 32px;
+    }
+  }
+  
+}
+
+@media (max-width: 426px) {
+
+  .cardsBen {
+    display: flex;
+    flex-direction: column;
+  
+    .cardBen {
+      width: 80%;
+      margin: 0 auto;
+      padding: 12px;
+      margin-bottom: 24px;
+      ul {
+        
+        li {
+          margin-bottom: 12px;
+          font-size: .5em;
+        }
+      }
+    }
+  }
+
+  
+}

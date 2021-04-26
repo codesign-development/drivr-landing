@@ -30,3 +30,17 @@ update = function() { stats.begin(); stats.end();  requestAnimationFrame(update)
 requestAnimationFrame(update);
 
 
+let topanim = document.querySelectorAll('.topAnim')
+
+function mostrarSection (){
+  let scrollTop = document.documentElement.scrollTop
+
+  for(var i=0; i < topanim.length; i++){
+    let alturaTop = topanim[i].offsetTop;
+    if(alturaTop - 100 < scrollTop){
+      topanim[i].style.opacity = 1;
+    }
+  }
+}
+
+window.addEventListener('scroll', mostrarSection)

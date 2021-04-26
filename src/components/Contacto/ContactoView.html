@@ -1,16 +1,16 @@
 <div class="contactForm">
-    <form action="">
-        <label for="name">Nombre</label>
-        <input type="text">
+    <form id='formulario' action="http://3.15.172.155:3333/send-email-contacto-drivr" method='POST'>
+        <label for="name">Nombre Completo</label>
+        <input id='nombre'type="text">
         <label for="name">Email</label>
-        <input type="email" name="email" id="email">
+        <input  type="email" name="email" id="email">
         <label for="name">Teléfono</label>
-        <input type="number" name="telefono" id="tel">
+        <input  type="number" name="telefono" id="tel">
         <label for="name">Empresa</label>
-        <input type="text">
+        <input id='empresa' type="text">
         <label for="name">Comentarios</label>
-        <textarea name="mensaje" id="msj" cols="30" rows="10"></textarea>
-        <button type="submit">Enviar</button> 
+        <textarea id='coment' name="mensaje" id="msj" cols="30" rows="10"></textarea>
+        <button id='enviar' type="submit">Enviar</button> 
     </form>
 </div>
 <div class="contact">

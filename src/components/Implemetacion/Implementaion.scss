@@ -57,3 +57,49 @@
     right: 2%;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .cardsImp {
+        flex-wrap: wrap;
+        .cardImp {
+            width: 25%;
+            height: auto;
+            margin: 0 auto;
+            &__txt {
+
+                ul {
+                  li {
+                    font-size: .5em;
+                  }
+                }
+            }
+    }
+}
+}
+
+@media (max-width: 426px) {
+    .cardsImp {
+        flex-wrap: wrap;
+        
+        .cardImp {
+            width: 70%;
+            height: auto;
+            margin-top: 12px;
+
+            &__txt {
+
+                ul {
+                  li {
+                    font-size: .5em;
+                  }
+                }
+            }
+            &__icon {
+                width: 32px;
+              }
+    }
+}
+.arrowBack{
+    width: 32px;
+}
+}

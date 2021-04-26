@@ -70,14 +70,28 @@ function init() {
     let texture = new THREE.TextureLoader().load("./public/fbx/UV_CaseNuevoAlbedo.png");
     simulador.children[5].material[0].map = texture
 
+    function windoResize (){
 
-
+      let windowWidth = window.innerWidth
+     
+      if(windowWidth<=768){
+        simulador.scale.set(.6, .6, .6)
+          simulador.position.set(-10, 50, 0)
+      }
+      if(windowWidth<=426){
+        simulador.scale.set(.5, .5, .5)
+          simulador.position.set(10, 40, 0)
+      }
+    }
+    windoResize ()
 
     function verScroll() {
       let home = document.querySelector('#home')
       let seccionUno = document.querySelector('#que-es')
       let seccionDos = document.querySelector('#que-evalua')
       let seccionTres = document.querySelector('#seguridad-vial')
+      let servicios = document.querySelector('#servicios')
+      let contact = document.querySelector('#contacto')
       let modelo = document.querySelector('.simulador')
 
       let actualScroll = window.scrollY
@@ -85,6 +99,8 @@ function init() {
       let inqueEs = seccionUno.getBoundingClientRect().height;
       let inevala = seccionDos.getBoundingClientRect().height;
       let inseg = seccionTres.getBoundingClientRect().height;
+      let inserv = servicios.getBoundingClientRect().height;
+      let incontact = contact.getBoundingClientRect().height;
       var tl = new TimelineMax({
         delay: -1
       });
@@ -110,8 +126,14 @@ function init() {
           break;
         case (actualScroll < inevala + inqueEs + inseg):
           modelo.style.opacity = 0
-
           break;
+       case (actualScroll < inevala + inqueEs + inseg + inserv):
+          modelo.style.opacity = 0
+          break;
+        case (actualScroll < inevala + inqueEs + inseg + inserv + incontact):
+          modelo.style.opacity = 0
+          break;
+        
         default:
           break;
       }

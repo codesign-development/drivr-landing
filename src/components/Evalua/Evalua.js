@@ -16,7 +16,7 @@ export default () => {
         console.log('entra click');
     })
     
-    console.log(btnImp);
+    
     return divElement
 }
 
