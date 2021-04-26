@@ -1,4 +1,6 @@
-const HTMLWebPackPlugin = require('html-webpack-plugin')
+const HTMLWebPackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
+
 
 module.exports = {
     entry: './src/main.js',
@@ -28,14 +30,25 @@ module.exports = {
             loader: 'svg-inline-loader'
           },
           {
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            type: 'asset/resource',
+            test: /\.(png|jpg|jpeg|gif)$/,
+            use: [
+              
+              {
+                loader: 'file-loader',
+                options:{
+                  name:'[name].[ext]',
+                  outputPath: 'img/',
+                  useRelativePath: true
+                }
+                
+              }
+            ]
           },
           {
             test: /\.html$/i,
             loader: 'html-loader',
           },
-          { test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+          /* { test: /\.(png|jpg|jpeg|woff|woff2|eot|ttf)$/, 
             use: [
               {
                 loader: 'url-loader',
@@ -43,13 +56,14 @@ module.exports = {
                   limit: 8192,
                 },
               },
-            ], }
+            ], } */
         ],
       },
     plugins: [
         new HTMLWebPackPlugin({
             template: 'src/index.html'
-        })
+        }),
+        
     ],
     mode: 'development',
 
