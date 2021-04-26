@@ -13,7 +13,6 @@ export default () => {
         implementacion.appendChild(Implementacion())
         implementacion.style.display = 'block'
         implementacion.style.opacity = 1
-        console.log('entra click');
     })
     
     

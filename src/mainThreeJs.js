@@ -68,7 +68,6 @@ function init() {
     let texture = new THREE.TextureLoader().load("./public/fbx/UV_CaseNuevoAlbedo.png");
     simulador.children[5].material[0].map = texture
 
-    
 
     function verScroll() {
       let home = document.querySelector('#home')
@@ -97,7 +96,7 @@ function init() {
           tl.to(simulador.rotation, 3, { ease: Power3.easeInOut, y: -.7 }, "=1")
           tl.to(simulador.position, 2, { ease: Power3.easeInOut, x:-30,y:-40,z:-35}, "-1")
           break;
-        case (actualScroll < inqueEs):
+        case (actualScroll-200 < inqueEs):
           modelo.style.opacity = 1
           tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -7 }, "=1")
           break;
