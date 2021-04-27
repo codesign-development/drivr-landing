@@ -450,12 +450,12 @@ span{
     margin-block-end: 0.4em;
   }
   .homeSlide {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     .swiper-slide {
       >img {
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
 
