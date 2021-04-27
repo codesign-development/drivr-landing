@@ -26,7 +26,6 @@ function init() {
   camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 2000 );
 
   camera.position.set(100, 200, 300);
-  console.log(camera)
 
   scene = new THREE.Scene();
 
@@ -52,10 +51,7 @@ function init() {
 
       }
 
-
-
     });
-
 
     object.name = "simulador"
     object.position.set(-30,-40,0)
@@ -67,7 +63,6 @@ function init() {
 
     let texture = new THREE.TextureLoader().load("./public/fbx/UV_CaseNuevoAlbedo.png");
     simulador.children[5].material[0].map = texture
-
 
     function verScroll() {
       let home = document.querySelector('#home')
@@ -85,50 +80,127 @@ function init() {
       let inseg = seccionTres.getBoundingClientRect().height;
       let inserv = servicios.getBoundingClientRect().height;
       let incontact = contact.getBoundingClientRect().height;
-      var tl = new TimelineMax({
-        delay: -1
-      });
-
-      
-      switch (true) {
-        case (actualScroll < inhome):
-          modelo.style.opacity = 0
-          tl.to(simulador.rotation, 3, { ease: Power3.easeInOut, y: -.7 }, "=1")
-          tl.to(simulador.position, 2, { ease: Power3.easeInOut, x:-30,y:-40,z:-35}, "-1")
-          break;
-        case (actualScroll-200 < inqueEs):
-          modelo.style.opacity = 1
-          tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -7 }, "=1")
-          break;
-        case (actualScroll < inevala + inqueEs):
-          modelo.style.opacity = 1
-          tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -8.2 }, "=1")
-          break;
-        case (actualScroll < inevala + inqueEs + inseg):
-          modelo.style.opacity = 0
-          break;
-       case (actualScroll < inevala + inqueEs + inseg + inserv):
-          modelo.style.opacity = 0
-          break;
-        case (actualScroll < inevala + inqueEs + inseg + inserv + incontact):
-          modelo.style.opacity = 0
-          break;
-        
-        default:
-          break;
-      }
       
       function windoResize(){
 
         let windowWidth = window.innerWidth
+
+        if(windowWidth>=770){
+
+          var tl = new TimelineMax({
+            delay: -1
+          });
+    
+          switch (true) {
+
+            case (actualScroll < inhome):
+              modelo.style.opacity = 0
+              tl.to(simulador.rotation, 3, { ease: Power3.easeInOut, y: -.2 }, "=1")
+              tl.to(simulador.position, 2, { ease: Power3.easeInOut, x:-15,y:-40,z:-30}, "-1")
+              break;
+            case (actualScroll-200 < inqueEs):
+              modelo.style.opacity = 1
+              tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -7 }, "=1")
+              break;
+            case (actualScroll < inevala + inqueEs):
+              modelo.style.opacity = 1
+              tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -8.3 }, "=1")
+              tl.to(simulador.position, 3, { ease: Power3.easeInOut, x:-5,y:-45,z:-30}, "1")
+              break;
+            case (actualScroll < inevala + inqueEs + inseg):
+              modelo.style.opacity = 0
+              break;
+           case (actualScroll < inevala + inqueEs + inseg + inserv):
+              modelo.style.opacity = 0
+              break;
+            case (actualScroll < inevala + inqueEs + inseg + inserv + incontact):
+              modelo.style.opacity = 0
+              break;
+            
+            default:
+              break;
+          }
+
+        }
        
         if(windowWidth<=768){
+
           simulador.scale.set(.55,.55,.55)
-          simulador.position.set(10,-30,10)
+
+          var tl2 = new TimelineMax({
+            delay: -1
+          });
+    
+          switch (true) {
+            case (actualScroll < inhome):
+              modelo.style.opacity = 0
+              tl2.to(simulador.rotation, 3, { ease: Power3.easeInOut, y: -.7 }, "=1")
+              tl2.to(simulador.position, 2, { ease: Power3.easeInOut, x:10,y:-30,z:10}, "-1")
+              break;
+            case (actualScroll-200 < inqueEs):
+              modelo.style.opacity = 1
+              tl2.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -7 }, "=1")
+              tl2.to(simulador.position, 3, { ease: Power3.easeInOut, x:-20,y:-30,z:10}, "1")
+              break;
+            case (actualScroll < inevala + inqueEs):
+              modelo.style.opacity = 1
+              tl2.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -8.3 }, "=1")
+              tl2.to(simulador.position, 3, { ease: Power3.easeInOut, x:15,y:-45,z:0}, "1")
+              break;
+            case (actualScroll < inevala + inqueEs + inseg):
+              modelo.style.opacity = 0
+              break;
+           case (actualScroll < inevala + inqueEs + inseg + inserv):
+              modelo.style.opacity = 0
+              break;
+            case (actualScroll < inevala + inqueEs + inseg + inserv + incontact):
+              modelo.style.opacity = 0
+              break;
+            
+            default:
+              break;
+          }
+
         }
+
         if(windowWidth<=426){
+
           simulador.scale.set(.4,.4,.4)
-          simulador.position.set(-8,-20,-10)
+
+          var tl3 = new TimelineMax({
+            delay: -1
+          });
+    
+          switch (true) {
+
+            case (actualScroll < inhome):
+              modelo.style.opacity = 0
+              tl3.to(simulador.rotation, 3, { ease: Power3.easeInOut, y: -.7 }, "=1")
+              tl3.to(simulador.position, 3, { ease: Power3.easeInOut, x:-10,y:-30,z:10}, "1")
+              break;
+            case (actualScroll-200 < inqueEs):
+              modelo.style.opacity = 1
+              tl3.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -7 }, "=1")
+              tl3.to(simulador.position, 3, { ease: Power3.easeInOut, x:-10,y:-30,z:10}, "1")
+              break;
+            case (actualScroll < inevala + inqueEs):
+              modelo.style.opacity = 1
+              tl3.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -8.3 }, "=1")
+              tl3.to(simulador.position, 3, { ease: Power3.easeInOut, x:15,y:-45,z:0}, "1")
+              break;
+            case (actualScroll < inevala + inqueEs + inseg):
+              modelo.style.opacity = 0
+              break;
+           case (actualScroll < inevala + inqueEs + inseg + inserv):
+              modelo.style.opacity = 0
+              break;
+            case (actualScroll < inevala + inqueEs + inseg + inserv + incontact):
+              modelo.style.opacity = 0
+              break;
+            
+            default:
+              break;
+          }
         }
       }
       windoResize();
@@ -144,6 +216,7 @@ function init() {
   renderer = new THREE.WebGLRenderer({
     alpha: true
   });
+
   renderer.setClearColor(0x000000, 0);
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -154,10 +227,8 @@ function init() {
   controls.target.set(0,0,0);
   controls.enableZoom = false
   controls.enablePan = false
-  controls.enableRotate = true
-  controls.maxPolarAngle = 1.2
+  controls.enableRotate = false
   controls.update();
-  console.log(controls)
 
   window.addEventListener('resize', onWindowResize);
 
@@ -172,7 +243,6 @@ function onWindowResize() {
 
   renderer.setSize(window.innerWidth, window.innerHeight);
   
-
 }
 
 //
