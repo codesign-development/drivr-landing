@@ -204,6 +204,27 @@ span{
     }
   }
 }
+.bullets{
+  width: 60%;
+  height: 100vh;
+  top: 15%;
+  left: 22%;
+  position: fixed;
+  z-index: 4;
+  opacity: 0 ;
+  transition: opacity 1s;
+}
+
+.bulletDos {
+  width: 65%;
+  top: 15%;
+  left: 14%;
+  position: fixed;
+  z-index: 6;
+  opacity: 0 ;
+  transition: opacity 2s;
+}
+
 //Slide
 .homeSlide {
   background: transparent;
@@ -223,10 +244,10 @@ span{
     width: 100vw;
     background: transparent;
     position: relative;
-
+    box-sizing: border-box;
     >img {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       mix-blend-mode: soft-light;
       opacity: .25;
@@ -319,6 +340,27 @@ span{
 }
 
 @media (max-width: 768px) {
+ 
+  .bullets{
+    width: 80%;
+    height: 100vh;
+    top: 38%;
+    left: 10%;
+    position: fixed;
+    z-index: 4;
+    opacity: 0 ;
+    transition: opacity 1s;
+  }
+  
+  .bulletDos {
+    width: 65%;
+    top: 50%;
+    left: 18%;
+    position: fixed;
+    z-index: 6;
+    opacity: 0 ;
+    transition: opacity 2s;
+  }
   .section {
     height: auto
   }
@@ -383,6 +425,18 @@ span{
 
 
 @media (max-width: 426px) {
+  .bullets{
+    width: 80%;
+    height: 100vh;
+    top: 42%;
+    left: 10%;
+  }
+  
+  .bulletDos {
+    width: 65%;
+    top: 50%;
+    left: 18%;
+  }
   #contacto{
     padding-top: 0px;
     height: auto;

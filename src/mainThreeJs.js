@@ -72,6 +72,8 @@ function init() {
       let servicios = document.querySelector('#servicios')
       let contact = document.querySelector('#contacto')
       let modelo = document.querySelector('.simulador')
+      let bullets = document.querySelector('.bullets')
+      let bulletsDos = document.querySelector('.bulletDos')
 
       let actualScroll = window.scrollY
       let inhome = home.getBoundingClientRect().height;
@@ -95,26 +97,38 @@ function init() {
 
             case (actualScroll < inhome):
               modelo.style.opacity = 0
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 0
               tl.to(simulador.rotation, 3, { ease: Power3.easeInOut, y: -.2 }, "=1")
               tl.to(simulador.position, 2, { ease: Power3.easeInOut, x:-15,y:-40,z:-30}, "-1")
               break;
             case (actualScroll-200 < inqueEs):
               modelo.style.opacity = 1
+              bullets.style.opacity = 1
+              bulletsDos.style.opacity = 0
               tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -7 }, "=1")
               break;
             case (actualScroll < inevala + inqueEs):
               modelo.style.opacity = 1
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 1
               tl.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -8.3 }, "=1")
               tl.to(simulador.position, 3, { ease: Power3.easeInOut, x:-5,y:-45,z:-30}, "1")
               break;
             case (actualScroll < inevala + inqueEs + inseg):
               modelo.style.opacity = 0
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 0
               break;
            case (actualScroll < inevala + inqueEs + inseg + inserv):
               modelo.style.opacity = 0
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 0
               break;
             case (actualScroll < inevala + inqueEs + inseg + inserv + incontact):
               modelo.style.opacity = 0
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 0
               break;
             
             default:
@@ -134,27 +148,39 @@ function init() {
           switch (true) {
             case (actualScroll < inhome):
               modelo.style.opacity = 0
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 0
               tl2.to(simulador.rotation, 3, { ease: Power3.easeInOut, y: -.7 }, "=1")
               tl2.to(simulador.position, 2, { ease: Power3.easeInOut, x:10,y:-30,z:10}, "-1")
               break;
             case (actualScroll-200 < inqueEs):
               modelo.style.opacity = 1
+              bullets.style.opacity = 1
+              bulletsDos.style.opacity = 0
               tl2.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -7 }, "=1")
               tl2.to(simulador.position, 3, { ease: Power3.easeInOut, x:-20,y:-30,z:10}, "1")
               break;
             case (actualScroll < inevala + inqueEs):
               modelo.style.opacity = 1
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 1
               tl2.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -8.3 }, "=1")
               tl2.to(simulador.position, 3, { ease: Power3.easeInOut, x:15,y:-45,z:0}, "1")
               break;
             case (actualScroll < inevala + inqueEs + inseg):
               modelo.style.opacity = 0
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 0
               break;
            case (actualScroll < inevala + inqueEs + inseg + inserv):
               modelo.style.opacity = 0
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 0
               break;
             case (actualScroll < inevala + inqueEs + inseg + inserv + incontact):
               modelo.style.opacity = 0
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 0
               break;
             
             default:
@@ -175,27 +201,39 @@ function init() {
 
             case (actualScroll < inhome):
               modelo.style.opacity = 0
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 0
               tl3.to(simulador.rotation, 3, { ease: Power3.easeInOut, y: -.7 }, "=1")
               tl3.to(simulador.position, 3, { ease: Power3.easeInOut, x:-10,y:-30,z:10}, "1")
               break;
             case (actualScroll-200 < inqueEs):
               modelo.style.opacity = 1
+              bullets.style.opacity = 1
+              bulletsDos.style.opacity = 0
               tl3.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -7 }, "=1")
               tl3.to(simulador.position, 3, { ease: Power3.easeInOut, x:-10,y:-30,z:10}, "1")
               break;
             case (actualScroll < inevala + inqueEs):
               modelo.style.opacity = 1
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 1
               tl3.to(simulador.rotation, 3, {ease: Power3.easeInOut, y: -8.3 }, "=1")
               tl3.to(simulador.position, 3, { ease: Power3.easeInOut, x:15,y:-45,z:0}, "1")
               break;
             case (actualScroll < inevala + inqueEs + inseg):
               modelo.style.opacity = 0
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 0
               break;
            case (actualScroll < inevala + inqueEs + inseg + inserv):
               modelo.style.opacity = 0
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 0
               break;
             case (actualScroll < inevala + inqueEs + inseg + inserv + incontact):
               modelo.style.opacity = 0
+              bullets.style.opacity = 0
+              bulletsDos.style.opacity = 0
               break;
             
             default:
