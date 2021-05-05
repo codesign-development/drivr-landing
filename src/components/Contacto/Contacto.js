@@ -30,7 +30,7 @@ export default () => {
           e.target.style.borderBottomColor = 'green'
         } else {
             e.target.style.borderBottomColor = 'red'
-            e.target.placeholder = 'Todos los cambpo son obligatorios'
+            e.target.placeholder = 'Todos los campos son obligatorios'
         }
 
         if(e.target.type === 'email'){

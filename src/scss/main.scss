@@ -143,9 +143,14 @@ span{
 #servicios{
   opacity: 0;
   transition: all ease-in 2s;
-  overflow-y:scroll
- 
-}
+  overflow-y:scroll;
+  >h3{
+    color: #6EFB73;
+    text-align: right;
+    margin-bottom: 40px;
+    margin-right: 120px;
+  }}
+  
 #modelo-implementacion{
     display: none;
     background-color: $dark-gray;
@@ -449,6 +454,13 @@ span{
     margin-block-start: 0.4em;
     margin-block-end: 0.4em;
   }
+  #servicios{
+    >h3{
+      font-size: 1em;
+      margin-bottom: 40px;
+      margin-right:28px;
+    }}
+    
   .homeSlide {
     width: 100%;
     height: 100vh;

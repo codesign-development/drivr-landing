@@ -19,6 +19,3 @@ export default () => {
     return divElement
 }
 
-/* function monstarImp(){
-    
-} */
