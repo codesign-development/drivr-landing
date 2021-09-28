@@ -23,7 +23,13 @@
     padding: 24px;
 
     &__direccion {
-      width: 30%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p{
+        cursor: pointer;
+      }
     }
 
     &__datos {
@@ -164,6 +170,9 @@
       &__direccion {
         width: 100%;
         margin-bottom: 20px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-bottom: 8px;
       }
 
       &__datos {

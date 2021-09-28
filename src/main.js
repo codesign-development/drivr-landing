@@ -19,7 +19,7 @@ window.onload = function () {
   about.appendChild(QueEs())
   evalua.appendChild(Evalua())
   seguridad.appendChild(Seguridad())
-  servicios.appendChild(Pricing())
+  //servicios.appendChild(Pricing())
   contact.appendChild(Contacto())
 };
 

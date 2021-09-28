@@ -12,6 +12,9 @@ export default () => {
     const telefono = divElement.querySelector('#tel')
     const empresa = divElement.querySelector('#empresa')
     const coment = divElement.querySelector('#coment')
+    const aviso = divElement.querySelector('#aviso')
+    const terminos = divElement.querySelector('#terminos')
+    
     evenListener ()
     function evenListener (){
         iniciarForm()
@@ -20,7 +23,8 @@ export default () => {
         telefono.addEventListener('blur', validarForm);
         empresa.addEventListener('blur', validarForm);
         coment.addEventListener('blur', validarForm);
-
+        aviso.addEventListener('click', openAviso);
+        terminos.addEventListener('click', openTerms)
         btnEnviar.addEventListener('click', enviarFormulario);
     }
 
@@ -71,6 +75,18 @@ export default () => {
         }
 
     }
+
+    
+    function openAviso(){
+        var win = window.open('../../../public/img/Aviso_de_privacidad_270921.pdf', '_blank');
+        win.focus();
+    }
+    function openTerms(){
+        var win = window.open('../../../public/img/Terminos_y_condiciones.pdf', '_blank');
+        win.focus();
+    }
+
+
     return divElement
 }
 
